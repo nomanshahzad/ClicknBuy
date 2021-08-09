@@ -36,6 +36,16 @@ public class adminActivity extends AppCompatActivity {
             }
         });
 
+        Button logout = findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent launchShowProducts = new Intent(adminActivity.this, loginActivity.class);
+                startActivity(launchShowProducts);
+                finish();
+            }
+        });
+
 
     }
 }
