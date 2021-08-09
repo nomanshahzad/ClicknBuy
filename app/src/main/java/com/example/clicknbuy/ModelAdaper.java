@@ -12,20 +12,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.clickbuy.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 public class ModelAdaper extends RecyclerView.Adapter<ModelAdaper.MyViewHolder> {
 //    private ArrayList<Model> mlist;
-    private ArrayList<Product> mlist;
+private ArrayList<Product> mlist;
+    private ArrayList<String> key;
     private Context context;
 
     public ModelAdaper() {
     }
 
-    public ModelAdaper( Context context,ArrayList<Product> mlist) {
-        this.context = context;
+    public ModelAdaper(Context context,ArrayList<Product> mlist, ArrayList<String> key) {
         this.mlist = mlist;
+        this.key = key;
+        this.context = context;
     }
 
     @NonNull
@@ -41,8 +45,16 @@ public class ModelAdaper extends RecyclerView.Adapter<ModelAdaper.MyViewHolder> 
         holder.productName.setText(product.getProductName());
         holder.productPrice.setText(product.getPrice());
         Glide.with(context).load(mlist.get(position).getImageUrl()).into(holder.imageView);
-//        Glide.with(context).load(mlist.get(position).getProductName()).into(holder.productName);
-//        Glide.with(context).load(mlist.get(position).getPrice()).into(holder.productPrice);
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseReference db = FirebaseDatabase.getInstance().getReference("Product");
+                db.child(key.get(position)).removeValue();
+                ((adminShowProductActivity)context).recreate();
+            }
+        });
+
+
     }
 
     @Override
@@ -51,7 +63,7 @@ public class ModelAdaper extends RecyclerView.Adapter<ModelAdaper.MyViewHolder> 
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        ImageView imageView;
+        ImageView imageView,delete;
         TextView productName,productPrice;
 
 
@@ -61,6 +73,7 @@ public class ModelAdaper extends RecyclerView.Adapter<ModelAdaper.MyViewHolder> 
             imageView = itemView.findViewById(R.id.showImage);
             productName = itemView.findViewById(R.id.showProductName);
             productPrice = itemView.findViewById(R.id.showProductPrice);
+            delete = itemView.findViewById(R.id.deleteProduct);
         }
     }
 }

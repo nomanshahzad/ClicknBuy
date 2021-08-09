@@ -20,6 +20,7 @@ public class adminShowProductActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 //    private ArrayList<Model> list;
     private ArrayList<Product> list;
+    ArrayList<String> key=new ArrayList<>();
 
     private ModelAdaper adapter;
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference("Product");
@@ -33,9 +34,8 @@ public class adminShowProductActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         list = new ArrayList<>();
-        adapter = new ModelAdaper(this,list);
+        adapter = new ModelAdaper(this,list,key);
         recyclerView.setAdapter(adapter);
 
 
@@ -46,6 +46,7 @@ public class adminShowProductActivity extends AppCompatActivity {
 
                     Product product = dataSnapshot.getValue(Product.class);
                     list.add(product);
+                    key.add(dataSnapshot.getKey());
 //                    Model model = dataSnapshot.getValue(Model.class);
 //                    list.add(model);
                 }

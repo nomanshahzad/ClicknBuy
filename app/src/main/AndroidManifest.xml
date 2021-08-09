@@ -16,15 +16,17 @@
         <!-- <activity android:name="com.example.clicknbuy.adminAddProducts"> -->
         <!-- </activity> -->
         <activity android:name="com.example.clicknbuy.userActivity" />
-        <activity android:name="com.example.clicknbuy.adminActivity"></activity>
-        <activity android:name="com.example.clicknbuy.signupActivity" />
-        <activity android:name="com.example.clicknbuy.loginIntro" />
-        <activity android:name="com.example.clicknbuy.loginActivity">
+        <activity android:name="com.example.clicknbuy.adminActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.example.clicknbuy.signupActivity" />
+        <activity android:name="com.example.clicknbuy.loginIntro" />
+        <activity android:name="com.example.clicknbuy.loginActivity">
+
         </activity>
         <activity android:name="com.example.clicknbuy.MainActivity" />
     </application>
