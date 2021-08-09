@@ -26,15 +26,15 @@ public class adminActivity extends AppCompatActivity {
             }
         });
 
-//        Button btnShowProducts = findViewById(R.id.buttonShowProduct);
-//        btnShowProducts.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent launchShowProducts = new Intent(adminActivity.this, adminShowProducts.class);
-//                startActivity(launchShowProducts);
-//                finish();
-//            }
-//        });
+        Button btnShowProducts = findViewById(R.id.buttonShowProduct);
+        btnShowProducts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent launchShowProducts = new Intent(adminActivity.this, adminShowProductActivity.class);
+                startActivity(launchShowProducts);
+                finish();
+            }
+        });
 
 
     }
