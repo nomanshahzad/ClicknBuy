@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "79724936015",
+    "firebase_url": "https://clicknbuy-5632b-default-rtdb.firebaseio.com",
+    "project_id": "clicknbuy-5632b",
+    "storage_bucket": "clicknbuy-5632b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79724936015:android:257c561556c70d84d5633a",
+        "android_client_info": {
+          "package_name": "com.example.clicknbuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79724936015-2b3mugtps8sfa8fg2isjsaenmg6m14oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqVNuqeCxbwt-MYnqLmwffr31dHXERGRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79724936015-2b3mugtps8sfa8fg2isjsaenmg6m14oi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
