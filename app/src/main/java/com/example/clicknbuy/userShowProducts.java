@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.clickbuy.R;
@@ -60,5 +61,13 @@ public class userShowProducts extends AppCompatActivity {
 
             }
         });
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent launchadmin = new Intent(userShowProducts.this, loginActivity.class);
+        startActivity(launchadmin);
+        finish();
     }
 }

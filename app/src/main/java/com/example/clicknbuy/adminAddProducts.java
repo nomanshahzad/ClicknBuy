@@ -151,4 +151,13 @@ public class adminAddProducts extends AppCompatActivity {
             }
         });
     }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent launchadmin = new Intent(adminAddProducts.this, adminActivity.class);
+        startActivity(launchadmin);
+        finish();
+    }
+
 }

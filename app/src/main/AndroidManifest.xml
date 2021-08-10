@@ -12,11 +12,7 @@
         <activity
             android:name="com.example.clicknbuy.userShowProducts"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.clicknbuy.adminShowProductActivity"
@@ -29,7 +25,11 @@
         <activity android:name="com.example.clicknbuy.signupActivity" />
         <activity android:name="com.example.clicknbuy.loginIntro" />
         <activity android:name="com.example.clicknbuy.loginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name="com.example.clicknbuy.MainActivity" />
     </application>
