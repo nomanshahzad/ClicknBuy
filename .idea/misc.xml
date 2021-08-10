@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ClicknBuy/app/src/main/res/drawable/ic_logo_background.xml" value="0.21614583333333334" />
+        <entry key="..\:/ClicknBuy/app/src/main/res/drawable/logo_pic.xml" value="0.21614583333333334" />
         <entry key="..\:/ClicknBuy/app/src/main/res/layout/activity_admin.xml" value="0.1431159420289855" />
         <entry key="..\:/ClicknBuy/app/src/main/res/layout/activity_admin_add_products.xml" value="0.1431159420289855" />
         <entry key="..\:/ClicknBuy/app/src/main/res/layout/activity_admin_show_product.xml" value="0.1431159420289855" />
         <entry key="..\:/ClicknBuy/app/src/main/res/layout/activity_admin_show_products.xml" value="0.1431159420289855" />
+        <entry key="..\:/ClicknBuy/app/src/main/res/layout/activity_login.xml" value="0.1322463768115942" />
+        <entry key="..\:/ClicknBuy/app/src/main/res/layout/activity_login_intro.xml" value="0.1322463768115942" />
         <entry key="..\:/ClicknBuy/app/src/main/res/layout/activity_signup.xml" value="0.21" />
+        <entry key="..\:/ClicknBuy/app/src/main/res/layout/activity_user.xml" value="0.2" />
         <entry key="..\:/ClicknBuy/app/src/main/res/layout/activity_user_show_products.xml" value="0.1431159420289855" />
         <entry key="..\:/ClicknBuy/app/src/main/res/layout/item.xml" value="0.1431159420289855" />
         <entry key="..\:/ClicknBuy/app/src/main/res/layout/user_product_item.xml" value="0.1431159420289855" />

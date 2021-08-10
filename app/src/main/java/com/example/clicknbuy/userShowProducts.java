@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.clickbuy.R;
 import com.google.firebase.database.DataSnapshot;
@@ -18,6 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class userShowProducts extends AppCompatActivity {
+    Button buybtn;
 
     private RecyclerView recyclerView;
     //    private ArrayList<Model> list;
@@ -33,6 +36,8 @@ public class userShowProducts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_show_products);
+
+
 
         recyclerView = findViewById(R.id.userrecView);
         recyclerView.setHasFixedSize(true);
@@ -61,12 +66,14 @@ public class userShowProducts extends AppCompatActivity {
 
             }
         });
+
+
     }
 
 
     @Override
     public void onBackPressed() {
-        Intent launchadmin = new Intent(userShowProducts.this, loginActivity.class);
+        Intent launchadmin = new Intent(userShowProducts.this, userActivity.class);
         startActivity(launchadmin);
         finish();
     }

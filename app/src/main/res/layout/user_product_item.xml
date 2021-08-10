@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="20dp"
-    app:cardBackgroundColor="#90EE90"
+    app:cardBackgroundColor="@color/appbackground"
     app:cardCornerRadius="30dp"
     app:cardElevation="20dp"
     android:layout_height="180dp">
@@ -25,16 +26,16 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="180dp"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/rs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="180dp"
         android:textSize="20sp"
         android:text="Rs : " />
@@ -43,7 +44,7 @@
         android:id="@+id/usershowProductPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="220dp"
         android:textSize="20sp"
         android:text="TextView" />
@@ -52,7 +53,7 @@
         android:id="@+id/buybutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="190dp"
+        android:layout_marginLeft="180dp"
         android:layout_marginTop="100dp"
         android:text="Buy" />
 

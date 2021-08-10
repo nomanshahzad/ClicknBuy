@@ -88,9 +88,9 @@ public class signupActivity extends AppCompatActivity {
                             ModelUser modelUser = new ModelUser(name,number,email);
                             myRef.push().setValue(modelUser);
 //
-//                            Intent launchmain = new Intent(signupActivity.this, MainActivity.class);
-//                            startActivity(launchmain);
-//                            finish();
+                            Intent launchlogin = new Intent(signupActivity.this, loginActivity.class);
+                            startActivity(launchlogin);
+                            finish();
 
                         } else {
                             Log.w("Error", "createUserWithEmail:failure", task.getException());

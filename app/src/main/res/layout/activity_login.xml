@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.loginActivity">
+    android:background="@color/appbackground"
+    tools:context="com.example.clicknbuy.loginActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -18,17 +19,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/applogo1" />
+
         <TextView
-            android:textColor="@color/colorPrimaryText"
+
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_marginTop="-40dp"
-            android:text="Welcome To Click &amp; Buy" />
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/appHeading"
+            android:text="Click &amp; Buy" />
 
         <TextView
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/colorPrimaryText"
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
@@ -83,6 +94,8 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryText"
             android:text="Don't have an account? Signup" />
+
+
     </LinearLayout>
 
     <ImageView

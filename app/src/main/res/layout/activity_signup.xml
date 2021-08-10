@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/appbackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.clicknbuy.signupActivity">
@@ -23,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sign-up Here"
-            android:textColor="@color/colorPrimaryText" />
+            android:textColor="@color/appHeading"/>
 
         <TextView
             style="@style/TextAppearance.AppCompat.Body1"

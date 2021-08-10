@@ -1,13 +1,16 @@
 package com.example.clicknbuy;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -18,9 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class UserShowProductAdapter extends RecyclerView.Adapter<UserShowProductAdapter.MyViewHolder> {
-    //    private ArrayList<Model> mlist;
     private ArrayList<Product> mlist;
-//    private ArrayList<String> key;
     private Context context;
 
     public UserShowProductAdapter() {
@@ -45,14 +46,7 @@ public class UserShowProductAdapter extends RecyclerView.Adapter<UserShowProduct
         holder.productName.setText(product.getProductName());
         holder.productPrice.setText(product.getPrice());
         Glide.with(context).load(mlist.get(position).getImageUrl()).into(holder.imageView);
-//        holder.delete.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                DatabaseReference db = FirebaseDatabase.getInstance().getReference("Product");
-//                db.child(key.get(position)).removeValue();
-//                ((adminShowProductActivity)context).recreate();
-//            }
-//        });
+
 
 
     }
@@ -69,11 +63,19 @@ public class UserShowProductAdapter extends RecyclerView.Adapter<UserShowProduct
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
+//            CardView card = itemView.findViewById(R.id.card);
             imageView = itemView.findViewById(R.id.usershowImage);
             productName = itemView.findViewById(R.id.usershowProductName);
             productPrice = itemView.findViewById(R.id.usershowProductPrice);
 //            buy = itemView.findViewById(R.id.buybutton);
+//            buy.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent launchAdminActivity = new Intent(card.getContext(), orderActivity.class);
+//                    card.getContext().startActivity(launchAdminActivity);
+//                    finish();
+//                }
+//            });
         }
     }
 }

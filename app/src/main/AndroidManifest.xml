@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClickBuy">
         <activity
+            android:name="com.example.clicknbuy.orderActivity"
+            android:exported="true" />
+        <activity
             android:name="com.example.clicknbuy.userShowProducts"
-            android:exported="true" >
+            android:exported="true">
 
         </activity>
         <activity
@@ -21,7 +24,7 @@
         <!-- <activity android:name="com.example.clicknbuy.adminAddProducts"> -->
         <!-- </activity> -->
         <activity android:name="com.example.clicknbuy.userActivity" />
-        <activity android:name="com.example.clicknbuy.adminActivity"></activity>
+        <activity android:name="com.example.clicknbuy.adminActivity" />
         <activity android:name="com.example.clicknbuy.signupActivity" />
         <activity android:name="com.example.clicknbuy.loginIntro" />
         <activity android:name="com.example.clicknbuy.loginActivity">
