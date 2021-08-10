@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.signupActivity">
+    tools:context="com.example.clicknbuy.signupActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -34,13 +34,33 @@
             android:text="Enter your email address and password\nto get access to your account"
             android:textColor="@color/colorPrimaryText" />
 
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="Full Name"
+            android:inputType="text"
+            android:textSize="16sp" />
 
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="Number (0300-0000000)"
+            android:inputType="text"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/etEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/edit_text_background"
             android:ems="10"
             android:hint="Email"

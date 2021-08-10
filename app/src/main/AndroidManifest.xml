@@ -10,19 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClickBuy">
         <activity
-            android:name="com.example.clicknbuy.adminShowProductActivity"
-            android:exported="true" />
-        <activity android:name="com.example.clicknbuy.adminAddProducts" /> <!-- <activity android:name=".adminShowProducts"></activity> -->
-        <!-- <activity android:name="com.example.clicknbuy.adminAddProducts"> -->
-        <!-- </activity> -->
-        <activity android:name="com.example.clicknbuy.userActivity" />
-        <activity android:name="com.example.clicknbuy.adminActivity">
+            android:name="com.example.clicknbuy.userShowProducts"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.clicknbuy.adminShowProductActivity"
+            android:exported="true" />
+        <activity android:name="com.example.clicknbuy.adminAddProducts" /> <!-- <activity android:name=".adminShowProducts"></activity> -->
+        <!-- <activity android:name="com.example.clicknbuy.adminAddProducts"> -->
+        <!-- </activity> -->
+        <activity android:name="com.example.clicknbuy.userActivity" />
+        <activity android:name="com.example.clicknbuy.adminActivity"></activity>
         <activity android:name="com.example.clicknbuy.signupActivity" />
         <activity android:name="com.example.clicknbuy.loginIntro" />
         <activity android:name="com.example.clicknbuy.loginActivity">

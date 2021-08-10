@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class signupActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
@@ -47,13 +49,18 @@ public class signupActivity extends AppCompatActivity {
     }
 
     private void signupUser() {
-        TextView temail, tpassword, tconfirmPassword;
+        TextView temail, tpassword, tconfirmPassword,tname,tnumber;
         temail = findViewById(R.id.etEmailAddress);
         String email = temail.getText().toString();
         tpassword = findViewById(R.id.etPassword);
         String password = tpassword.getText().toString();
         tconfirmPassword = findViewById(R.id.etConfirmPassword);
         String confirmPassword = tpassword.getText().toString();
+
+        tname = findViewById(R.id.etFullName);
+        String name = tname.getText().toString();
+        tnumber = findViewById(R.id.etNumber);
+        String number = tnumber.getText().toString();
 
 
 
@@ -75,6 +82,11 @@ public class signupActivity extends AppCompatActivity {
                             Toast.makeText(signupActivity.this, "Signed Up Successfully!", Toast.LENGTH_SHORT).show();
 //                            FirebaseUser user = firebaseAuth.getCurrentUser();
 //                            updateUI(user);
+                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+                            DatabaseReference myRef = database.getReference("Users");
+
+                            ModelUser modelUser = new ModelUser(name,number,email);
+                            myRef.push().setValue(modelUser);
 //
 //                            Intent launchmain = new Intent(signupActivity.this, MainActivity.class);
 //                            startActivity(launchmain);
